@@ -36,6 +36,6 @@ if submitted:
         grid= sns.FacetGrid(cluster_df1, col='Cluster')
         grid= grid.map(plt.hist, c)
         plt.show()
-        st.pyplot(figsize=(5, 5))
+        st.pyplot(figsize=(5,5))
 
 
