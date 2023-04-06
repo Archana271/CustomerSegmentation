@@ -26,7 +26,7 @@ with st.form("my_form"):
     submitted = st.form_submit_button("Submit")
 
 if submitted:
-    clust=loaded_model.predict(data)[0]
+    clust=loaded_model(data)[0]
     print('Data Belongs to Cluster',clust)
 
     cluster_df1=df[df['Cluster']==clust]
