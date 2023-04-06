@@ -32,9 +32,7 @@ if submitted:
     cluster_df1=df[df['Cluster']==clust]
     plt.figure(figsize=(20,3))
     for c in cluster_df1.drop(['Cluster'],axis=1):
-        
         fig, ax = plt.subplots()
-        ax.hist(arr, bins=20)
         grid= sns.FacetGrid(cluster_df1, col='Cluster')
         grid= grid.map(plt.hist, c)
         plt.show()
