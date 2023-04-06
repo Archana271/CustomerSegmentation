@@ -34,8 +34,8 @@ if submitted:
     for c in cluster_df1.drop(['Cluster'],axis=1):
         fig, ax = plt.subplots()
         grid= sns.FacetGrid(cluster_df1, col='Cluster')
-        grid= grid.map(plt.hist, c)
+        grid= grid.map(plt.hist, c,bins=20)
         plt.show()
-        st.pyplot(fig=(5, 5))
+        st.pyplot(fig)
 
 
