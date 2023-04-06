@@ -3,11 +3,11 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
-import pickle
+import json
 
 path = os.path.dirname(__file__)
 filename = path+'/model_file_name.json'
-loaded_model = pickle.load(open(filename, 'rb'))
+loaded_model = json.load(open(filename, 'rb'))
 df = pd.read_csv(path+"/Clustered_Customer_Data.csv")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
