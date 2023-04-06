@@ -30,12 +30,12 @@ if submitted:
     print('Data Belongs to Cluster',clust)
 
     cluster_df1=df[df['Cluster']==clust]
-    plt.figure(figsize=(3,3))
+    plt.figure(figsize=(20,3))
     for c in cluster_df1.drop(['Cluster'],axis=1):
         fig, ax = plt.subplots()
         grid= sns.FacetGrid(cluster_df1, col='Cluster')
         grid= grid.map(plt.hist, c)
         plt.show()
-        st.pyplot(fig)
+        return st.pyplot(fig)
 
 
