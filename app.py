@@ -6,7 +6,7 @@ import seaborn as sns
 import pickle
 
 path = os.path.dirname(__file__)
-filename = path+'/final_model.save'
+filename = path+'/booster.save_model'
 loaded_model = pickle.load(open(filename, 'rb'))
 df = pd.read_csv(path+"/Clustered_Customer_Data.csv")
 st.set_option('deprecation.showPyplotGlobalUse', False)
